@@ -18,7 +18,7 @@ public class ModEnchantments {
     public static final Enchantment THUNDER = new EnchantmentThunder("enchantmentThunder");
     public static final Enchantment GRASSNESS = new EnchantmentGrassness("enchantmentGrassness");
 
-    public static final EnumEnchantmentType WEAPONS = EnumHelper.addEnchantmentType("weapons", item->(item instanceof ItemSword || item instanceof ItemBow));
+    public static final EnumEnchantmentType WEAPONS = EnumHelper.addEnchantmentType("weapons", (item)->(item instanceof ItemSword || item instanceof ItemBow));
 
     @SubscribeEvent
     public static void registerEnchantments(RegistryEvent.Register<Enchantment> event){

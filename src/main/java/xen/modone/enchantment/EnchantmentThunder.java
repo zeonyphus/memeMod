@@ -11,7 +11,8 @@ public class EnchantmentThunder extends Enchantment {
 
     public EnchantmentThunder(String name){
         super(Rarity.UNCOMMON, ModEnchantments.WEAPONS, new EntityEquipmentSlot[]{EntityEquipmentSlot.MAINHAND, EntityEquipmentSlot.OFFHAND});
-
+        this.setRegistryName(name);
+        this.setName(name);
     }
 
     @Override
