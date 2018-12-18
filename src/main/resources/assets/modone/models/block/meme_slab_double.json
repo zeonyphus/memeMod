@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "modone:blocks/meme_slab_top",
+    "side": "modone:blocks/meme_slab_side"
+  }
+}

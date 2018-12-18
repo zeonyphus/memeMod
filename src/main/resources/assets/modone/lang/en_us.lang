@@ -1,0 +1,16 @@
+item.memeIngot.name=Meme Ingot
+item.memeDust.name=Meme Dust
+item.memeApple.name=Meme Apple
+item.superMemeApple.name=Super Meme Apple
+item.memeSword.name=Meme Sword
+item.memePickaxe.name=Meme Pickaxe
+item.memeAxe.name=Meme Axe
+item.memeShovel.name=Meme Shovel
+item.memeHoe.name=Meme Hoe
+item.memePickaxeaxe.name=Meme Axe Pick
+tile.memeBlock.name=Meme Block
+tile.memeOre.name=Meme Ore
+tile.meme_slab_half.name=Meme Slab
+itemGroup.tabMemeModItems=Meme Mod Items
+itemGroup.tabMemeModBlocks=Meme Mod Blocks
+itemGroup.tabMemeModEnvironment=Meme Mod Environment

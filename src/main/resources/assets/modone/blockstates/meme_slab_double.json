@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "variant=default": { "model": "modone:meme_slab_double" }
+  }
+}
