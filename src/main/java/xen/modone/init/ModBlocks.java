@@ -63,7 +63,9 @@ public class ModBlocks {
 
     @SubscribeEvent
     public static void registerItemBlocks(RegistryEvent.Register<Item> event){
-        event.getRegistry().registerAll(new ItemBlock(memeBlock).setRegistryName(memeBlock.getRegistryName()), new ItemBlock(memeOre).setRegistryName(memeOre.getRegistryName()), new ItemBlock(memeBrick).setRegistryName(memeBrick.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(memeBlock).setRegistryName(memeBlock.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(memeOre).setRegistryName(memeOre.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(memeBrick).setRegistryName(memeBrick.getRegistryName()));
         event.getRegistry().register(new ItemSlab(memeSlabHalf, memeSlabHalf, memeSlabDouble).setRegistryName(memeSlabHalf.getRegistryName()));
     }
 
