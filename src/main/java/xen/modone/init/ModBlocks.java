@@ -22,10 +22,11 @@ import xen.modone.blocks.BlockOre;
 @Mod.EventBusSubscriber(modid = ModOne.MODID)
 public class ModBlocks {
 
-    static Block memeBlock;
+    public static Block memeBlock;
     public static Block memeOre;
     public static BlockMemeSlab memeSlabHalf;
     public static BlockMemeSlab memeSlabDouble;
+    public static Block memeBrick;
 
     static final CreativeTabs tabMemeModBlocks = (new CreativeTabs("tabMemeModBlocks") {
         @Override
@@ -46,6 +47,8 @@ public class ModBlocks {
         memeBlock.setHarvestLevel("pickaxe", 3);
         memeOre = new BlockOre("memeOre", Material.ROCK, ModItems.memeDust, 1, 5).setHardness(5.0f).setCreativeTab(CreativeTabs.BUILDING_BLOCKS).setCreativeTab(ModBlocks.tabMemeModEnvironment).setResistance(5f).setLightLevel(3.0f/15.0f);
         memeOre.setHarvestLevel("pickaxe", 3);
+        memeBrick = new BlockBasic("meme_brick", Material.ROCK).setHardness(35.0f).setCreativeTab(ModBlocks.tabMemeModBlocks).setLightLevel(1.0f);
+        memeBrick.setHarvestLevel("picaxe", 3);
 
         memeSlabHalf = new BlockMemeSlab.Half("meme_slab_half", Material.ROCK);
         memeSlabHalf.setCreativeTab(ModBlocks.tabMemeModBlocks).setHardness(3f).setResistance(5f).setHarvestLevel("pickaxe", 2);
@@ -55,12 +58,12 @@ public class ModBlocks {
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event){
-        event.getRegistry().registerAll(memeBlock, memeOre, memeSlabHalf, memeSlabDouble);
+        event.getRegistry().registerAll(memeBlock, memeOre, memeBrick, memeSlabHalf, memeSlabDouble);
     }
 
     @SubscribeEvent
     public static void registerItemBlocks(RegistryEvent.Register<Item> event){
-        event.getRegistry().registerAll(new ItemBlock(memeBlock).setRegistryName(memeBlock.getRegistryName()), new ItemBlock(memeOre).setRegistryName(memeOre.getRegistryName()));
+        event.getRegistry().registerAll(new ItemBlock(memeBlock).setRegistryName(memeBlock.getRegistryName()), new ItemBlock(memeOre).setRegistryName(memeOre.getRegistryName()), new ItemBlock(memeBrick.setRegistryName(memeBrick.getRegistryName())));
         event.getRegistry().register(new ItemSlab(memeSlabHalf, memeSlabHalf, memeSlabDouble).setRegistryName(memeSlabHalf.getRegistryName()));
     }
 
@@ -69,6 +72,7 @@ public class ModBlocks {
         registerRender(Item.getItemFromBlock(memeBlock));
         registerRender(Item.getItemFromBlock(memeOre));
         registerRender(Item.getItemFromBlock(memeSlabHalf));
+        registerRender(Item.getItemFromBlock(memeBrick));
     }
 
     public static void registerRender(Item item){

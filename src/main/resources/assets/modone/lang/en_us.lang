@@ -11,6 +11,7 @@ item.memePickaxeaxe.name=Meme Axe Pick
 tile.memeBlock.name=Meme Block
 tile.memeOre.name=Meme Ore
 tile.meme_slab_half.name=Meme Slab
+tile.meme_brick.name=Meme Bricks
 enchantment.enchantmentGrassness=Grassness
 itemGroup.tabMemeModItems=Meme Mod Items
 itemGroup.tabMemeModBlocks=Meme Mod Blocks

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "key": {
+    "A": [
+      {
+        "item": "modone:memeblock",
+        "data": 0
+      }
+    ]
+  },
+  "result": {
+    "item": "modone:meme_brick",
+    "data": 0
+  }
+}
