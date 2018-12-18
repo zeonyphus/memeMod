@@ -45,7 +45,7 @@ public class ModBlocks {
     public static void init(){
         memeBlock = new BlockBasic("memeBlock", Material.ROCK).setHardness(30.0f).setCreativeTab(CreativeTabs.BUILDING_BLOCKS).setCreativeTab(ModBlocks.tabMemeModBlocks).setLightLevel(1.0f);
         memeBlock.setHarvestLevel("pickaxe", 3);
-        memeOre = new BlockOre("memeOre", Material.ROCK, ModItems.memeDust, 1, 5).setHardness(5.0f).setCreativeTab(CreativeTabs.BUILDING_BLOCKS).setCreativeTab(ModBlocks.tabMemeModEnvironment).setResistance(5f).setLightLevel(3.0f/15.0f);
+        memeOre = new BlockOre("memeOre", Material.ROCK, ModItems.memeDust, 1, 5).setHardness(5.0f).setCreativeTab(CreativeTabs.BUILDING_BLOCKS).setCreativeTab(ModBlocks.tabMemeModEnvironment).setResistance(5f).setLightLevel(4.0f/15.0f);
         memeOre.setHarvestLevel("pickaxe", 3);
         memeBrick = new BlockBasic("meme_brick", Material.ROCK).setHardness(35.0f).setCreativeTab(ModBlocks.tabMemeModBlocks).setLightLevel(1.0f);
         memeBrick.setHarvestLevel("picaxe", 3);
