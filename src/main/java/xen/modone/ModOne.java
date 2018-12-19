@@ -18,7 +18,7 @@ public class ModOne {
 
     public static final String MODID = "modone";
     public static final String NAME = "ModOne";
-    public static final String VERSION = "0.1";
+    public static final String VERSION = "0.5";
     public static final String ACCEPTED_MINECRAFT_VERSIONS = "[1.12]";
 
     private static Logger logger;
