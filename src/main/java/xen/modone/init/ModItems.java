@@ -19,9 +19,12 @@ import xen.modone.items.tools.*;
 public class ModItems {
 
     public static Item memeDust;
-    static Item memeIngot;
+    public static Item memeIngot;
+    public static Item memeRod;
+
     static Item memeApple;
     static Item superMemeApple;
+    public static Item memeSeeds;
 
     static Item memeSword;
     static Item memeShovel;
@@ -29,7 +32,7 @@ public class ModItems {
     static Item memeHoe;
     static Item memeAxe;
     static Item memePickaxeaxe;
-    public static Item memeSeeds;
+
 
     static final CreativeTabs tabMemeModItems = (new CreativeTabs("tabMemeModItems") {
         @Override
@@ -41,8 +44,8 @@ public class ModItems {
     public static final Item.ToolMaterial MEMETOOLMATERIAL = EnumHelper.addToolMaterial("MEMETOOLMATERIAL", 3, 4096, 18f, 7.0f, 30);
 
     public static void init(){
-        memeDust = new ItemBasic("memeDust").setCreativeTab(CreativeTabs.MISC).setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(27);
-        memeIngot = new ItemBasic("memeIngot").setCreativeTab(CreativeTabs.MISC).setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(9);
+        memeDust = new ItemBasic("memeDust").setCreativeTab(CreativeTabs.MISC).setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(64);
+        memeIngot = new ItemBasic("memeIngot").setCreativeTab(CreativeTabs.MISC).setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(64);
         memeApple = new ItemCustomFood("memeApple", 5, 1f, false).setCreativeTab(CreativeTabs.FOOD).setCreativeTab(ModItems.tabMemeModItems);
         superMemeApple = new ItemEffectFood("superMemeApple", 5, 0.3f, false).setCreativeTab(CreativeTabs.FOOD).setCreativeTab(ModItems.tabMemeModItems);
         memeSword = new ItemCustomSword("memeSword", MEMETOOLMATERIAL).setCreativeTab(ModItems.tabMemeModItems);
@@ -51,6 +54,7 @@ public class ModItems {
         memeShovel = new ItemCustomShovel("memeShovel", MEMETOOLMATERIAL).setCreativeTab(ModItems.tabMemeModItems);
         memeHoe = new ItemCustomHoe("memeHoe", MEMETOOLMATERIAL).setCreativeTab(ModItems.tabMemeModItems);
         memePickaxeaxe = new ItemPickaxeAxe("memePickaxeaxe", MEMETOOLMATERIAL).setCreativeTab(ModItems.tabMemeModItems);
+        memeRod = new ItemBasic("meme_rod").setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(64);
     }
 
     @SubscribeEvent
@@ -71,6 +75,7 @@ public class ModItems {
         registerRender(memeShovel);
         registerRender(memeHoe);
         registerRender(memePickaxeaxe);
+        registerRender(memeRod);
     }
 
     private static void registerRender(Item item) {

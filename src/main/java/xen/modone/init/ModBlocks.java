@@ -72,7 +72,7 @@ public class ModBlocks {
         event.getRegistry().register(new ItemBlock(memeOre).setRegistryName(memeOre.getRegistryName()));
         event.getRegistry().register(new ItemBlock(memeBrick).setRegistryName(memeBrick.getRegistryName()));
         event.getRegistry().register(new ItemSlab(memeSlabHalf, memeSlabHalf, memeSlabDouble).setRegistryName(memeSlabHalf.getRegistryName()));
-        ModItems.memeSeeds = new ItemMemeSeeds(ModBlocks.memeWheat, Blocks.GOLD_BLOCK, "meme_seeds");
+        ModItems.memeSeeds = new ItemMemeSeeds(ModBlocks.memeWheat, Blocks.GOLD_BLOCK, "meme_seeds").setCreativeTab(ModItems.tabMemeModItems);
         event.getRegistry().register(ModItems.memeSeeds);
     }
 

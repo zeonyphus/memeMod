@@ -1,25 +1,26 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "AAA",
-    " BA",
-    " B "
+    "B",
+    "A",
+    "B"
   ],
   "key": {
     "A": [
       {
-        "item": "modone:memeblock",
+        "item": "modone:memeingot",
         "data": 0
       }
     ],
     "B": [
       {
-        "item": "modone:meme_rod"
+        "item": "minecraft:stick",
+        "data": 0
       }
     ]
   },
   "result": {
-    "item": "modone:memepickaxeaxe",
+    "item": "modone:meme_rod",
     "data": 0
   }
 }
