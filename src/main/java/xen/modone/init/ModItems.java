@@ -44,10 +44,10 @@ public class ModItems {
     public static final Item.ToolMaterial MEMETOOLMATERIAL = EnumHelper.addToolMaterial("MEMETOOLMATERIAL", 3, 4096, 18f, 7.0f, 30);
 
     public static void init(){
-        memeDust = new ItemBasic("memeDust").setCreativeTab(CreativeTabs.MISC).setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(64);
-        memeIngot = new ItemBasic("memeIngot").setCreativeTab(CreativeTabs.MISC).setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(64);
-        memeApple = new ItemCustomFood("memeApple", 5, 1f, false).setCreativeTab(CreativeTabs.FOOD).setCreativeTab(ModItems.tabMemeModItems);
-        superMemeApple = new ItemEffectFood("superMemeApple", 5, 0.3f, false).setCreativeTab(CreativeTabs.FOOD).setCreativeTab(ModItems.tabMemeModItems);
+        memeDust = new ItemBasic("memeDust").setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(64);
+        memeIngot = new ItemBasic("memeIngot").setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(64);
+        memeApple = new ItemCustomFood("memeApple", 5, 1f, false).setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(64);
+        superMemeApple = new ItemEffectFood("superMemeApple", 5, 0.3f, false).setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(64);
         memeSword = new ItemCustomSword("memeSword", MEMETOOLMATERIAL).setCreativeTab(ModItems.tabMemeModItems);
         memePickxe = new ItemCustomPickaxe("memePickaxe", MEMETOOLMATERIAL).setCreativeTab(ModItems.tabMemeModItems);
         memeAxe = new ItemCustomAxe("memeAxe", MEMETOOLMATERIAL, 9.0f, -2.5f).setCreativeTab(ModItems.tabMemeModItems);
@@ -59,7 +59,7 @@ public class ModItems {
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event){
-        event.getRegistry().registerAll(memeIngot, memeDust, memeApple, superMemeApple, memeSword, memePickxe, memeAxe, memeShovel, memeHoe, memePickaxeaxe);
+        event.getRegistry().registerAll(memeIngot, memeDust, memeApple, superMemeApple, memeRod, memeSword, memePickxe, memeAxe, memeShovel, memeHoe, memePickaxeaxe);
     }
 
     @SubscribeEvent
