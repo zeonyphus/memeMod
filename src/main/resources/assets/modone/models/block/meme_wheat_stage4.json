@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "modone:blocks/crops/meme_crop_stage_4"
+  }
+}

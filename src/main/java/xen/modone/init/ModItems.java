@@ -2,6 +2,7 @@ package xen.modone.init;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -17,7 +18,7 @@ import xen.modone.items.tools.*;
 @Mod.EventBusSubscriber(modid = ModOne.MODID)
 public class ModItems {
 
-    static Item memeDust;
+    public static Item memeDust;
     static Item memeIngot;
     static Item memeApple;
     static Item superMemeApple;
@@ -28,6 +29,7 @@ public class ModItems {
     static Item memeHoe;
     static Item memeAxe;
     static Item memePickaxeaxe;
+    public static Item memeSeeds;
 
     static final CreativeTabs tabMemeModItems = (new CreativeTabs("tabMemeModItems") {
         @Override
@@ -62,6 +64,7 @@ public class ModItems {
         registerRender(memeDust);
         registerRender(memeApple);
         registerRender(superMemeApple);
+        registerRender(memeSeeds);
         registerRender(memeSword);
         registerRender(memePickxe);
         registerRender(memeAxe);

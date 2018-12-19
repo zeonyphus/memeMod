@@ -1,10 +1,10 @@
 package xen.modone.init;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemSlab;
@@ -18,6 +18,8 @@ import xen.modone.ModOne;
 import xen.modone.blocks.BlockBasic;
 import xen.modone.blocks.BlockMemeSlab;
 import xen.modone.blocks.BlockOre;
+import xen.modone.blocks.MemeWheat;
+import xen.modone.items.ItemMemeSeeds;
 
 @Mod.EventBusSubscriber(modid = ModOne.MODID)
 public class ModBlocks {
@@ -27,6 +29,7 @@ public class ModBlocks {
     public static BlockMemeSlab memeSlabHalf;
     public static BlockMemeSlab memeSlabDouble;
     public static Block memeBrick;
+    static Block memeWheat;
 
     static final CreativeTabs tabMemeModBlocks = (new CreativeTabs("tabMemeModBlocks") {
         @Override
@@ -54,11 +57,13 @@ public class ModBlocks {
         memeSlabHalf.setCreativeTab(ModBlocks.tabMemeModBlocks).setHardness(3f).setResistance(5f).setHarvestLevel("pickaxe", 2);
         memeSlabDouble = new BlockMemeSlab.Double("meme_slab_double", Material.ROCK);
         memeSlabDouble.setHardness(3f).setResistance(5f).setHarvestLevel("pickaxe", 2);
+
+        memeWheat = new MemeWheat("meme_wheat");
     }
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event){
-        event.getRegistry().registerAll(memeBlock, memeOre, memeBrick, memeSlabHalf, memeSlabDouble);
+        event.getRegistry().registerAll(memeBlock, memeOre, memeBrick, memeSlabHalf, memeSlabDouble, memeWheat);
     }
 
     @SubscribeEvent
@@ -67,6 +72,8 @@ public class ModBlocks {
         event.getRegistry().register(new ItemBlock(memeOre).setRegistryName(memeOre.getRegistryName()));
         event.getRegistry().register(new ItemBlock(memeBrick).setRegistryName(memeBrick.getRegistryName()));
         event.getRegistry().register(new ItemSlab(memeSlabHalf, memeSlabHalf, memeSlabDouble).setRegistryName(memeSlabHalf.getRegistryName()));
+        ModItems.memeSeeds = new ItemMemeSeeds(ModBlocks.memeWheat, Blocks.GOLD_BLOCK, "meme_seeds");
+        event.getRegistry().register(ModItems.memeSeeds);
     }
 
     @SubscribeEvent
