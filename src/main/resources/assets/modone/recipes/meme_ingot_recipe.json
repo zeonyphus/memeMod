@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "modone:meme_block",
+      "data": 0
+    }
+  ],
+  "result": {
+    "item": "modone:meme_ingot",
+    "data": 0
+  }
+}

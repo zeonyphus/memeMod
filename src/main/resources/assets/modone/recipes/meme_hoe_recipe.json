@@ -2,7 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "AA",
-    "AA"
+    " B",
+    " B"
   ],
   "key": {
     "A": [
@@ -10,10 +11,15 @@
         "item": "modone:meme_block",
         "data": 0
       }
+    ],
+    "B": [
+      {
+        "item": "modone:meme_rod"
+      }
     ]
   },
   "result": {
-    "item": "modone:meme_brick",
+    "item": "modone:meme_hoe",
     "data": 0
   }
 }

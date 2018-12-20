@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.Logger;
+import xen.modone.init.ModArmor;
 import xen.modone.init.ModBlocks;
 import xen.modone.init.ModItems;
 import xen.modone.init.ModRecipies;
@@ -31,6 +32,7 @@ public class ModOne {
         System.out.println(ModOne.MODID + ":preInit");
         logger = event.getModLog();
         ModItems.init();
+        ModArmor.init();
         ModBlocks.init();
         ModRecipies.init();
         GameRegistry.registerWorldGenerator(new OreGen(), 0);

@@ -34,26 +34,26 @@ public class ModItems {
     static Item memePickaxeaxe;
 
 
-    static final CreativeTabs tabMemeModItems = (new CreativeTabs("tabMemeModItems") {
+    public static final CreativeTabs tabMemeModItems = (new CreativeTabs("tabMemeModItems") {
         @Override
         public ItemStack getTabIconItem() {
             return new ItemStack(memeDust);
         }
     });
 
-    public static final Item.ToolMaterial MEMETOOLMATERIAL = EnumHelper.addToolMaterial("MEMETOOLMATERIAL", 3, 4096, 18f, 7.0f, 30);
+    public static final Item.ToolMaterial MEMETOOLMATERIAL = EnumHelper.addToolMaterial("MEMETOOLMATERIAL", 4, 4096, 18f, 7.0f, 30);
 
     public static void init(){
-        memeDust = new ItemBasic("memeDust").setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(64);
-        memeIngot = new ItemBasic("memeIngot").setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(64);
-        memeApple = new ItemCustomFood("memeApple", 5, 1f, false).setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(64);
-        superMemeApple = new ItemEffectFood("superMemeApple", 5, 0.3f, false).setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(64);
-        memeSword = new ItemCustomSword("memeSword", MEMETOOLMATERIAL).setCreativeTab(ModItems.tabMemeModItems);
-        memePickxe = new ItemCustomPickaxe("memePickaxe", MEMETOOLMATERIAL).setCreativeTab(ModItems.tabMemeModItems);
-        memeAxe = new ItemCustomAxe("memeAxe", MEMETOOLMATERIAL, 9.0f, -2.5f).setCreativeTab(ModItems.tabMemeModItems);
-        memeShovel = new ItemCustomShovel("memeShovel", MEMETOOLMATERIAL).setCreativeTab(ModItems.tabMemeModItems);
-        memeHoe = new ItemCustomHoe("memeHoe", MEMETOOLMATERIAL).setCreativeTab(ModItems.tabMemeModItems);
-        memePickaxeaxe = new ItemPickaxeAxe("memePickaxeaxe", MEMETOOLMATERIAL).setCreativeTab(ModItems.tabMemeModItems);
+        memeDust = new ItemBasic("meme_dust").setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(64);
+        memeIngot = new ItemBasic("meme_ingot").setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(64);
+        memeApple = new ItemCustomFood("meme_apple", 5, 1f, false).setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(64);
+        superMemeApple = new ItemEffectFood("super_meme_apple", 5, 0.3f, false).setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(64);
+        memeSword = new ItemCustomSword("meme_sword", MEMETOOLMATERIAL).setCreativeTab(ModItems.tabMemeModItems);
+        memePickxe = new ItemCustomPickaxe("meme_pickaxe", MEMETOOLMATERIAL).setCreativeTab(ModItems.tabMemeModItems);
+        memeAxe = new ItemCustomAxe("meme_axe", MEMETOOLMATERIAL, 9.0f, -2.5f).setCreativeTab(ModItems.tabMemeModItems);
+        memeShovel = new ItemCustomShovel("meme_shovel", MEMETOOLMATERIAL).setCreativeTab(ModItems.tabMemeModItems);
+        memeHoe = new ItemCustomHoe("meme_hoe", MEMETOOLMATERIAL).setCreativeTab(ModItems.tabMemeModItems);
+        memePickaxeaxe = new ItemPickaxeAxe("meme_pickaxe_axe", MEMETOOLMATERIAL).setCreativeTab(ModItems.tabMemeModItems);
         memeRod = new ItemBasic("meme_rod").setCreativeTab(ModItems.tabMemeModItems).setMaxStackSize(64);
     }
 

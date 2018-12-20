@@ -19,6 +19,7 @@ import xen.modone.blocks.BlockBasic;
 import xen.modone.blocks.BlockMemeSlab;
 import xen.modone.blocks.BlockOre;
 import xen.modone.blocks.MemeWheat;
+import xen.modone.items.ItemBasic;
 import xen.modone.items.ItemMemeSeeds;
 
 @Mod.EventBusSubscriber(modid = ModOne.MODID)
@@ -26,9 +27,12 @@ public class ModBlocks {
 
     public static Block memeBlock;
     public static Block memeOre;
+    public static Block memeBrick;
+    public static Block memeObsidian;
+
     public static BlockMemeSlab memeSlabHalf;
     public static BlockMemeSlab memeSlabDouble;
-    public static Block memeBrick;
+
     static Block memeWheat;
 
     static final CreativeTabs tabMemeModBlocks = (new CreativeTabs("tabMemeModBlocks") {
@@ -46,12 +50,14 @@ public class ModBlocks {
     });
 
     public static void init(){
-        memeBlock = new BlockBasic("memeBlock", Material.ROCK).setHardness(30.0f).setCreativeTab(CreativeTabs.BUILDING_BLOCKS).setCreativeTab(ModBlocks.tabMemeModBlocks).setLightLevel(1.0f);
+        memeBlock = new BlockBasic("meme_block", Material.ROCK).setHardness(30.0f).setCreativeTab(CreativeTabs.BUILDING_BLOCKS).setCreativeTab(ModBlocks.tabMemeModBlocks).setLightLevel(1.0f);
         memeBlock.setHarvestLevel("pickaxe", 3);
-        memeOre = new BlockOre("memeOre", Material.ROCK, ModItems.memeDust, 1, 5).setHardness(5.0f).setCreativeTab(CreativeTabs.BUILDING_BLOCKS).setCreativeTab(ModBlocks.tabMemeModEnvironment).setResistance(5f).setLightLevel(4.0f/15.0f);
+        memeOre = new BlockOre("meme_ore", Material.ROCK, ModItems.memeDust, 1, 5).setHardness(5.0f).setCreativeTab(CreativeTabs.BUILDING_BLOCKS).setCreativeTab(ModBlocks.tabMemeModEnvironment).setResistance(5f).setLightLevel(4.0f/15.0f);
         memeOre.setHarvestLevel("pickaxe", 3);
         memeBrick = new BlockBasic("meme_brick", Material.ROCK).setHardness(35.0f).setCreativeTab(ModBlocks.tabMemeModBlocks).setLightLevel(1.0f);
         memeBrick.setHarvestLevel("picaxe", 3);
+        memeObsidian = new BlockBasic("meme_obsidian", Material.ROCK).setHardness(60.0f).setCreativeTab(ModBlocks.tabMemeModBlocks).setLightLevel(10.0f/15.0f);
+        memeObsidian.setHarvestLevel("pickaxe", 4);
 
         memeSlabHalf = new BlockMemeSlab.Half("meme_slab_half", Material.ROCK);
         memeSlabHalf.setCreativeTab(ModBlocks.tabMemeModBlocks).setHardness(3f).setResistance(5f).setHarvestLevel("pickaxe", 2);
@@ -63,7 +69,7 @@ public class ModBlocks {
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event){
-        event.getRegistry().registerAll(memeBlock, memeOre, memeBrick, memeSlabHalf, memeSlabDouble, memeWheat);
+        event.getRegistry().registerAll(memeBlock, memeOre, memeBrick, memeSlabHalf, memeSlabDouble, memeWheat, memeObsidian);
     }
 
     @SubscribeEvent
@@ -72,6 +78,8 @@ public class ModBlocks {
         event.getRegistry().register(new ItemBlock(memeOre).setRegistryName(memeOre.getRegistryName()));
         event.getRegistry().register(new ItemBlock(memeBrick).setRegistryName(memeBrick.getRegistryName()));
         event.getRegistry().register(new ItemSlab(memeSlabHalf, memeSlabHalf, memeSlabDouble).setRegistryName(memeSlabHalf.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(memeObsidian).setRegistryName(memeObsidian.getRegistryName()));
+
         ModItems.memeSeeds = new ItemMemeSeeds(ModBlocks.memeWheat, Blocks.GOLD_BLOCK, "meme_seeds").setCreativeTab(ModItems.tabMemeModItems);
         event.getRegistry().register(ModItems.memeSeeds);
     }
@@ -82,6 +90,7 @@ public class ModBlocks {
         registerRender(Item.getItemFromBlock(memeOre));
         registerRender(Item.getItemFromBlock(memeSlabHalf));
         registerRender(Item.getItemFromBlock(memeBrick));
+        registerRender(Item.getItemFromBlock(memeObsidian));
     }
 
     public static void registerRender(Item item){

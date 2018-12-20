@@ -1,19 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "AA",
-    "AA"
+    "AAA",
+    "AAA",
+    "AAA"
   ],
   "key": {
     "A": [
       {
-        "item": "modone:meme_block",
+        "item": "modone:meme_ingot",
         "data": 0
       }
     ]
   },
   "result": {
-    "item": "modone:meme_brick",
+    "item": "modone:meme_block",
     "data": 0
   }
 }

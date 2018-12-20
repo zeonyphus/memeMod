@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "AA",
-    "AA"
+    "AAA",
+    "A A",
+    "A A"
   ],
   "key": {
     "A": [
@@ -13,7 +14,7 @@
     ]
   },
   "result": {
-    "item": "modone:meme_brick",
+    "item": "modone:meme_leggings",
     "data": 0
   }
 }
