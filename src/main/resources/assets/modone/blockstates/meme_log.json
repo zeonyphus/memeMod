@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "axis=y": { "model": "modone:meme_log" },
+    "axis=z": { "model": "modone:meme_log", "x": 90 },
+    "axis=x": { "model": "modone:meme_log", "x": 90, "y": 90 },
+    "axis=none": { "model": "modone:meme_log" }
+  }
+}

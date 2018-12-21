@@ -1,0 +1,14 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": {
+      "particle": "modone:blocks/meme_leaves",
+      "all": "modone:blocks/meme_leaves"
+    },
+    "model": "modone:block/meme_leaves",
+    "uvlock": true
+  },
+  "variants": {
+    "normal": {"model": "modone:block/meme_leaves"}
+  }
+}

@@ -1,6 +1,7 @@
 package xen.modone.init;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockLog;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -15,10 +16,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import xen.modone.ModOne;
-import xen.modone.blocks.BlockBasic;
-import xen.modone.blocks.BlockMemeSlab;
-import xen.modone.blocks.BlockOre;
-import xen.modone.blocks.MemeWheat;
+import xen.modone.blocks.*;
 import xen.modone.items.ItemBasic;
 import xen.modone.items.ItemMemeSeeds;
 
@@ -32,6 +30,10 @@ public class ModBlocks {
 
     public static BlockMemeSlab memeSlabHalf;
     public static BlockMemeSlab memeSlabDouble;
+
+    public static BlockLog memeLog;
+    public static BlockMemeLeaves memeLeaves;
+    public static BlockMemeSapling memeSapling;
 
     static Block memeWheat;
 
@@ -65,11 +67,20 @@ public class ModBlocks {
         memeSlabDouble.setHardness(3f).setResistance(5f).setHarvestLevel("pickaxe", 2);
 
         memeWheat = new MemeWheat("meme_wheat");
+
+        memeLog = new BlockMemeLog("meme_log");
+        memeLog.setCreativeTab(ModBlocks.tabMemeModEnvironment).setHarvestLevel("axe", 3);
+        memeLeaves = new BlockMemeLeaves("meme_leaves");
+        memeLeaves.setCreativeTab(ModBlocks.tabMemeModEnvironment);
+        memeSapling = new BlockMemeSapling("meme_sapling");
+        memeSapling.setCreativeTab(ModBlocks.tabMemeModEnvironment);
+
+
     }
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event){
-        event.getRegistry().registerAll(memeBlock, memeOre, memeBrick, memeSlabHalf, memeSlabDouble, memeWheat, memeObsidian);
+        event.getRegistry().registerAll(memeBlock, memeOre, memeBrick, memeSlabHalf, memeSlabDouble, memeWheat, memeObsidian,memeLog, memeSapling);
     }
 
     @SubscribeEvent
@@ -82,6 +93,10 @@ public class ModBlocks {
 
         ModItems.memeSeeds = new ItemMemeSeeds(ModBlocks.memeWheat, Blocks.GOLD_BLOCK, "meme_seeds").setCreativeTab(ModItems.tabMemeModItems);
         event.getRegistry().register(ModItems.memeSeeds);
+
+        event.getRegistry().register(new ItemBlock(memeLog).setRegistryName(memeLog.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(memeLeaves).setRegistryName(memeLeaves.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(memeSapling).setRegistryName(memeSapling.getRegistryName()));
     }
 
     @SubscribeEvent
@@ -91,6 +106,8 @@ public class ModBlocks {
         registerRender(Item.getItemFromBlock(memeSlabHalf));
         registerRender(Item.getItemFromBlock(memeBrick));
         registerRender(Item.getItemFromBlock(memeObsidian));
+        registerRender(Item.getItemFromBlock(memeLog));
+        registerRender(Item.getItemFromBlock(memeLeaves));
     }
 
     public static void registerRender(Item item){
