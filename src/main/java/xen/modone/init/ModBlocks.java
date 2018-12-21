@@ -108,6 +108,7 @@ public class ModBlocks {
         registerRender(Item.getItemFromBlock(memeObsidian));
         registerRender(Item.getItemFromBlock(memeLog));
         registerRender(Item.getItemFromBlock(memeLeaves));
+        registerRender(Item.getItemFromBlock(memeSapling));
     }
 
     public static void registerRender(Item item){
