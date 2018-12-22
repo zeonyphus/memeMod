@@ -1,5 +1,5 @@
 {
-  "parent": "blocks/cross",
+  "parent": "block/cross",
   "textures":{
     "cross": "modone:blocks/meme_sapling"
   }

@@ -80,7 +80,7 @@ public class ModBlocks {
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event){
-        event.getRegistry().registerAll(memeBlock, memeOre, memeBrick, memeSlabHalf, memeSlabDouble, memeWheat, memeObsidian,memeLog, memeSapling);
+        event.getRegistry().registerAll(memeBlock, memeOre, memeBrick, memeSlabHalf, memeSlabDouble, memeWheat, memeObsidian, memeLog, memeLeaves, memeSapling);
     }
 
     @SubscribeEvent
