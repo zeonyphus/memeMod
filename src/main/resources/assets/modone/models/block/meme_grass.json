@@ -1,0 +1,10 @@
+{
+  "parent": "block/grass",
+  "textures": {
+    "particle": "blocks/dirt",
+    "bottom": "blocks/dirt",
+    "top": "modone:blocks/meme_grass_top",
+    "side": "modone:blocks/meme_grass_side",
+    "overlay": "modone:blocks/meme_grass_side_overlay"
+  }
+}

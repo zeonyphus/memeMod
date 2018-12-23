@@ -35,6 +35,8 @@ public class ModBlocks {
     public static BlockMemeLeaves memeLeaves;
     public static BlockMemeSapling memeSapling;
 
+    public static BlockBasic memeGrass;
+
     static Block memeWheat;
 
     static final CreativeTabs tabMemeModBlocks = (new CreativeTabs("tabMemeModBlocks") {
@@ -52,7 +54,7 @@ public class ModBlocks {
     });
 
     public static void init(){
-        memeBlock = new BlockBasic("meme_block", Material.ROCK).setHardness(30.0f).setCreativeTab(CreativeTabs.BUILDING_BLOCKS).setCreativeTab(ModBlocks.tabMemeModBlocks).setLightLevel(1.0f);
+        memeBlock = new BlockBasic("meme_block", Material.ROCK).setHardness(30.0f).setCreativeTab(ModBlocks.tabMemeModBlocks).setLightLevel(1.0f);
         memeBlock.setHarvestLevel("pickaxe", 3);
         memeOre = new BlockOre("meme_ore", Material.ROCK, ModItems.memeDust, 1, 5).setHardness(5.0f).setCreativeTab(CreativeTabs.BUILDING_BLOCKS).setCreativeTab(ModBlocks.tabMemeModEnvironment).setResistance(5f).setLightLevel(4.0f/15.0f);
         memeOre.setHarvestLevel("pickaxe", 3);
@@ -61,6 +63,13 @@ public class ModBlocks {
         memeObsidian = new BlockBasic("meme_obsidian", Material.ROCK).setHardness(60.0f).setCreativeTab(ModBlocks.tabMemeModBlocks).setLightLevel(10.0f/15.0f);
         memeObsidian.setHarvestLevel("pickaxe", 4);
 
+        //TODO Need to fix the grass so trees can be planted on it
+        //TODO the way the grass pulls in the textures is absolute GARBAGE in the JSON
+        memeGrass = new BlockBasic("meme_grass", Material.ROCK);
+        memeGrass.setHardness(20.0f).setHarvestLevel("shovel", 3);
+        memeGrass.setCreativeTab(ModBlocks.tabMemeModEnvironment);
+
+        //TODO the slabs seem slightly off color
         memeSlabHalf = new BlockMemeSlab.Half("meme_slab_half", Material.ROCK);
         memeSlabHalf.setCreativeTab(ModBlocks.tabMemeModBlocks).setHardness(3f).setResistance(5f).setHarvestLevel("pickaxe", 2);
         memeSlabDouble = new BlockMemeSlab.Double("meme_slab_double", Material.ROCK);
@@ -70,17 +79,18 @@ public class ModBlocks {
 
         memeLog = new BlockMemeLog("meme_log");
         memeLog.setCreativeTab(ModBlocks.tabMemeModEnvironment).setHarvestLevel("axe", 3);
+
+        //TODO leaves have no "fancy" variant
         memeLeaves = new BlockMemeLeaves("meme_leaves");
         memeLeaves.setCreativeTab(ModBlocks.tabMemeModEnvironment);
         memeSapling = new BlockMemeSapling("meme_sapling");
         memeSapling.setCreativeTab(ModBlocks.tabMemeModEnvironment);
 
-
     }
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event){
-        event.getRegistry().registerAll(memeBlock, memeOre, memeBrick, memeSlabHalf, memeSlabDouble, memeWheat, memeObsidian, memeLog, memeLeaves, memeSapling);
+        event.getRegistry().registerAll(memeBlock, memeOre, memeGrass, memeBrick, memeSlabHalf, memeSlabDouble, memeWheat, memeObsidian, memeLog, memeLeaves, memeSapling);
     }
 
     @SubscribeEvent
@@ -90,6 +100,7 @@ public class ModBlocks {
         event.getRegistry().register(new ItemBlock(memeBrick).setRegistryName(memeBrick.getRegistryName()));
         event.getRegistry().register(new ItemSlab(memeSlabHalf, memeSlabHalf, memeSlabDouble).setRegistryName(memeSlabHalf.getRegistryName()));
         event.getRegistry().register(new ItemBlock(memeObsidian).setRegistryName(memeObsidian.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(memeGrass).setRegistryName(memeGrass.getRegistryName()));
 
         ModItems.memeSeeds = new ItemMemeSeeds(ModBlocks.memeWheat, Blocks.GOLD_BLOCK, "meme_seeds").setCreativeTab(ModItems.tabMemeModItems);
         event.getRegistry().register(ModItems.memeSeeds);
@@ -109,6 +120,7 @@ public class ModBlocks {
         registerRender(Item.getItemFromBlock(memeLog));
         registerRender(Item.getItemFromBlock(memeLeaves));
         registerRender(Item.getItemFromBlock(memeSapling));
+        registerRender(Item.getItemFromBlock(memeGrass));
     }
 
     public static void registerRender(Item item){

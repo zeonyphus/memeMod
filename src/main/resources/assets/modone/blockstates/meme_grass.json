@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "normal": [
+      {"model": "modone:meme_grass"}
+    ],
+    "snowy=false": [
+      { "model": "modone:meme_grass" },
+      { "model": "modone:meme_grass", "y": 90 },
+      { "model": "modone:meme_grass", "y": 180 },
+      { "model": "modone:meme_grass", "y": 270 }
+    ],
+    "snowy=true":  { "model": "modone:meme_grass" }
+  }
+}

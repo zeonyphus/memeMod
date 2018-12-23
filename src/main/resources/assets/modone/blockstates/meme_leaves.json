@@ -2,7 +2,7 @@
   "forge_marker": 1,
   "defaults": {
     "textures": {
-      "particle": "blocks/log_oak"
+      "particle": "modone:blocks/meme_leaves"
     },
     "model": "modone:meme_leaves",
     "uvlock": true
