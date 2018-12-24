@@ -89,6 +89,7 @@ public class ModBlocks {
         memeSapling = new BlockMemeSapling("meme_sapling");
         memeSapling.setCreativeTab(ModBlocks.tabMemeModEnvironment);
 
+        //TODO make more than one block come out of processors
         memeProcessor = new BlockMemeProcessor("meme_processor", Material.ROCK);
         memeProcessor.setCreativeTab(ModBlocks.tabMemeModBlocks);
 
