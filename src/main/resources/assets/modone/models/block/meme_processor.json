@@ -1,0 +1,13 @@
+{
+  "parent": "block/orientable",
+  "textures":
+  {
+    "particle": "modone:blocks/meme_processor_front_off",
+    "up": "modone:blocks/meme_processor_front_off",
+    "down": "modone:blocks/meme_processor_front_off",
+    "north": "modone:blocks/meme_processor_front_off",
+    "east": "modone:blocks/meme_processor_side",
+    "south": "modone:blocks/meme_processor_side",
+    "west": "modone:blocks/meme_processor_side"
+  }
+}

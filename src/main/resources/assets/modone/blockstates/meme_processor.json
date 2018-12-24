@@ -1,0 +1,13 @@
+{
+  "variants":
+  {
+    "burning=false,facing=north": {"model": "modone:meme_processor"},
+    "burning=false,facing=east": {"model": "modone:meme_processor", "y": 90},
+    "burning=false,facing=south": {"model": "modone:meme_processor", "y": 180},
+    "burning=false,facing=west": {"model": "modone:meme_processor", "y": 270},
+    "burning=true,facing=north": {"model": "modone:meme_processor"},
+    "burning=true,facing=east": {"model": "modone:meme_processor", "y": 90},
+    "burning=true,facing=south": {"model": "modone:meme_processor", "y": 180},
+    "burning=true,facing=west": {"model": "modone:meme_processor", "y": 270}
+  }
+}

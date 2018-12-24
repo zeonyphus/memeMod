@@ -17,6 +17,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import xen.modone.ModOne;
 import xen.modone.blocks.*;
+import xen.modone.blocks.machines.BlockMemeProcessor;
 import xen.modone.items.ItemBasic;
 import xen.modone.items.ItemMemeSeeds;
 
@@ -38,6 +39,8 @@ public class ModBlocks {
     public static BlockBasic memeGrass;
 
     static Block memeWheat;
+
+    public static Block memeProcessor;
 
     static final CreativeTabs tabMemeModBlocks = (new CreativeTabs("tabMemeModBlocks") {
         @Override
@@ -65,7 +68,7 @@ public class ModBlocks {
 
         //TODO Need to fix the grass so trees can be planted on it
         //TODO the way the grass pulls in the textures is absolute GARBAGE in the JSON
-        memeGrass = new BlockBasic("meme_grass", Material.ROCK);
+        memeGrass = new BlockBasic("meme_grass", Material.GRASS);
         memeGrass.setHardness(20.0f).setHarvestLevel("shovel", 3);
         memeGrass.setCreativeTab(ModBlocks.tabMemeModEnvironment);
 
@@ -86,11 +89,14 @@ public class ModBlocks {
         memeSapling = new BlockMemeSapling("meme_sapling");
         memeSapling.setCreativeTab(ModBlocks.tabMemeModEnvironment);
 
+        memeProcessor = new BlockMemeProcessor("meme_processor", Material.ROCK);
+        memeProcessor.setCreativeTab(ModBlocks.tabMemeModBlocks);
+
     }
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event){
-        event.getRegistry().registerAll(memeBlock, memeOre, memeGrass, memeBrick, memeSlabHalf, memeSlabDouble, memeWheat, memeObsidian, memeLog, memeLeaves, memeSapling);
+        event.getRegistry().registerAll(memeBlock, memeOre, memeGrass, memeBrick, memeSlabHalf, memeSlabDouble, memeWheat, memeObsidian, memeLog, memeLeaves, memeSapling, memeProcessor);
     }
 
     @SubscribeEvent
@@ -108,6 +114,7 @@ public class ModBlocks {
         event.getRegistry().register(new ItemBlock(memeLog).setRegistryName(memeLog.getRegistryName()));
         event.getRegistry().register(new ItemBlock(memeLeaves).setRegistryName(memeLeaves.getRegistryName()));
         event.getRegistry().register(new ItemBlock(memeSapling).setRegistryName(memeSapling.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(memeProcessor).setRegistryName(memeProcessor.getRegistryName()));
     }
 
     @SubscribeEvent
@@ -121,6 +128,7 @@ public class ModBlocks {
         registerRender(Item.getItemFromBlock(memeLeaves));
         registerRender(Item.getItemFromBlock(memeSapling));
         registerRender(Item.getItemFromBlock(memeGrass));
+        registerRender(Item.getItemFromBlock(memeProcessor));
     }
 
     public static void registerRender(Item item){
