@@ -3,8 +3,8 @@
   "textures":
   {
     "particle": "modone:blocks/meme_processor_front_off",
-    "up": "modone:blocks/meme_processor_front_off",
-    "down": "modone:blocks/meme_processor_front_off",
+    "up": "modone:blocks/meme_processor_top",
+    "down": "modone:blocks/meme_processor_bottom",
     "north": "modone:blocks/meme_processor_front_on",
     "east": "modone:blocks/meme_processor_side",
     "south": "modone:blocks/meme_processor_side",
