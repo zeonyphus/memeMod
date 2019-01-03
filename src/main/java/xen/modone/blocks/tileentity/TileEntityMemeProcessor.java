@@ -211,7 +211,7 @@ public class TileEntityMemeProcessor extends TileEntity implements IInventory, I
              ItemStack output = (ItemStack)this.inventory.get(3);
 
              if(output.isEmpty()) this.inventory.set(3, result.copy());
-             else if(output.getItem() == result.getItem()) output.grow(result.getCount());
+             else if(output.getItem() == result.getItem()) output.grow(1);
 
              input1.shrink(1);
              input2.shrink(1);
