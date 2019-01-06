@@ -14,22 +14,26 @@
     ],
     "B":[
       {
-        "item": "minecraft:stone"
+        "item": "minecraft:stone",
+        "data": 0
       }
     ],
     "C":[
       {
-        "item": "modone:double_furnace"
+        "item": "modone:double_furnace",
+        "data": 0
       }
     ],
     "D":[
       {
-        "item": "minecraft:lapis_lazuli"
+        "item": "minecraft:lapis_lazuli",
+        "data": 0
       }
     ],
     "E":[
       {
-        "item": "modone:meme_dust"
+        "item": "modone:meme_dust",
+        "data": 0
       }
     ]
   },

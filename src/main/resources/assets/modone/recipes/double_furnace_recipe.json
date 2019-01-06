@@ -1,25 +1,26 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "AAA",
     "ABA",
-    "AAA"
+    "BBB",
+    "BBB"
   ],
   "key": {
     "A": [
       {
-        "item": "modone:meme_block",
+        "item": "minecraft:furnace",
         "data": 0
       }
     ],
-    "B":[
+    "B": [
       {
-        "item": "minecraft:obsidian"
+        "item": "minecraft:stone",
+        "data": 0
       }
     ]
   },
   "result": {
-    "item": "",
+    "item": "modone:double_furnace",
     "data": 0
   }
 }

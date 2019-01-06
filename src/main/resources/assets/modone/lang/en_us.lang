@@ -24,6 +24,7 @@ tile.meme_leaves.name=Meme Leaves
 tile.meme_sapling.name=Meme Sapling
 tile.meme_grass.name=Meme Grass Block
 tile.meme_processor.name=Meme Processor
+tile.double_furnace.name=Double Furnace
 container.meme_processor=MemeProcessor
 enchantment.enchantmentGrassness=Grassness
 enchantment.enchantmentThunder=Thunder
