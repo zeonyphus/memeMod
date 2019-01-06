@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DAD",
+    "BCB",
+    "AEA"
+  ],
+  "key": {
+    "A": [
+      {
+        "item": "modone:meme_block",
+        "data": 0
+      }
+    ],
+    "B":[
+      {
+        "item": "minecraft:stone"
+      }
+    ],
+    "C":[
+      {
+        "item": "modone:double_furnace"
+      }
+    ],
+    "D":[
+      {
+        "item": "minecraft:lapis_lazuli"
+      }
+    ],
+    "E":[
+      {
+        "item": "modone:meme_dust"
+      }
+    ]
+  },
+  "result": {
+    "item": "modone:meme_processor",
+    "data": 0
+  }
+}

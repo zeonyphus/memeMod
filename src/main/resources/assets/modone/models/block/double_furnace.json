@@ -1,0 +1,13 @@
+{
+  "parent": "block/orientable",
+  "textures":
+  {
+    "particle": "modone:blocks/crafting/double_furnace_front",
+    "up": "blocks/furnace_top",
+    "down": "blocks/furnace_top",
+    "north": "modone:blocks/crafting/double_furnace_front",
+    "east": "blocks/furnace_side",
+    "south": "blocks/furnace_side",
+    "west": "blocks/furnace_side"
+  }
+}

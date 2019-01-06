@@ -42,6 +42,8 @@ public class ModBlocks {
 
     public static Block memeProcessor;
 
+    public static BlockBasic doubleFurnace;
+
     static final CreativeTabs tabMemeModBlocks = (new CreativeTabs("tabMemeModBlocks") {
         @Override
         public ItemStack getTabIconItem() {
@@ -93,11 +95,14 @@ public class ModBlocks {
         memeProcessor = new BlockMemeProcessor("meme_processor", Material.ROCK);
         memeProcessor.setCreativeTab(ModBlocks.tabMemeModBlocks);
 
+        doubleFurnace = new BlockBasic("double_furnace", Material.ROCK);
+        doubleFurnace.setHardness(5f).setResistance(8f).setCreativeTab(ModBlocks.tabMemeModBlocks).setHarvestLevel("pickaxe", 3);
+
     }
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event){
-        event.getRegistry().registerAll(memeBlock, memeOre, memeGrass, memeBrick, memeSlabHalf, memeSlabDouble, memeWheat, memeObsidian, memeLog, memeLeaves, memeSapling, memeProcessor);
+        event.getRegistry().registerAll(memeBlock, memeOre, memeGrass, memeBrick, memeSlabHalf, memeSlabDouble, memeWheat, memeObsidian, memeLog, memeLeaves, memeSapling, memeProcessor, doubleFurnace);
     }
 
     @SubscribeEvent
@@ -116,6 +121,7 @@ public class ModBlocks {
         event.getRegistry().register(new ItemBlock(memeLeaves).setRegistryName(memeLeaves.getRegistryName()));
         event.getRegistry().register(new ItemBlock(memeSapling).setRegistryName(memeSapling.getRegistryName()));
         event.getRegistry().register(new ItemBlock(memeProcessor).setRegistryName(memeProcessor.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(doubleFurnace).setRegistryName(doubleFurnace.getRegistryName()));
     }
 
     @SubscribeEvent
@@ -130,6 +136,7 @@ public class ModBlocks {
         registerRender(Item.getItemFromBlock(memeSapling));
         registerRender(Item.getItemFromBlock(memeGrass));
         registerRender(Item.getItemFromBlock(memeProcessor));
+        registerRender(Item.getItemFromBlock(doubleFurnace));
     }
 
     public static void registerRender(Item item){
