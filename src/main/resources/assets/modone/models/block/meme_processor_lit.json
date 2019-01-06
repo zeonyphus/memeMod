@@ -4,7 +4,7 @@
   {
     "particle": "modone:blocks/machines/meme_processor_front_off",
     "up": "modone:blocks/machines/meme_processor_top",
-    "down": "modone:blocks/machines/meme_processor_bottom",
+    "down": "modone:blocks/meme_slab_top",
     "north": "modone:blocks/machines/meme_processor_front_on",
     "east": "modone:blocks/machines/meme_processor_side",
     "south": "modone:blocks/machines/meme_processor_side",
