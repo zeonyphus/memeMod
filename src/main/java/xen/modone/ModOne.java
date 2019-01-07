@@ -1,9 +1,7 @@
 package xen.modone;
 
-import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -14,7 +12,7 @@ import xen.modone.blocks.tileentity.TileEntityMemeProcessor;
 import xen.modone.init.ModArmor;
 import xen.modone.init.ModBlocks;
 import xen.modone.init.ModItems;
-import xen.modone.init.ModRecipies;
+import xen.modone.init.ModRecipes;
 import xen.modone.util.GuiHandler;
 import xen.modone.worldgen.OreGen;
 
@@ -46,7 +44,7 @@ public class ModOne {
         ModItems.init();
         ModArmor.init();
         ModBlocks.init();
-        ModRecipies.init();
+        ModRecipes.init();
         GameRegistry.registerWorldGenerator(new OreGen(), 0);
         GameRegistry.registerTileEntity(TileEntityMemeProcessor.class, "meme_processor");
     }
