@@ -15,12 +15,11 @@
     "B": [
       {
         "item": "minecraft:oak_sapling",
-        "data": 0
       }
     ]
   },
   "result": {
-    "item": "modone:meme_apple",
+    "item": "modone:meme_sapling",
     "data": 0
   }
 }
