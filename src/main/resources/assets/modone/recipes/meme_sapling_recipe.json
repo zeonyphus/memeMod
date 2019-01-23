@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABA",
+    "BAB",
+    "ABA"
+  ],
+  "key": {
+    "A": [
+      {
+        "item": "modone:meme_block",
+        "data": 0
+      }
+    ],
+    "B": [
+      {
+        "item": "minecraft:oak_sapling",
+        "data": 0
+      }
+    ]
+  },
+  "result": {
+    "item": "modone:meme_apple",
+    "data": 0
+  }
+}
