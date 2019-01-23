@@ -8,5 +8,4 @@ public class ItemBasic extends Item{
         setUnlocalizedName(name);
         setRegistryName(name);
     }
-
 }

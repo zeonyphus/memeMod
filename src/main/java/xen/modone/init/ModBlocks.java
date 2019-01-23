@@ -74,7 +74,7 @@ public class ModBlocks {
         memeGrass.setHardness(20.0f).setHarvestLevel("shovel", 3);
         memeGrass.setCreativeTab(ModBlocks.tabMemeModEnvironment);
 
-        //TODO the slabs seem slightly off color
+        //TODO the slabs seem slightly off color, maybe since they don't have lighting?
         memeSlabHalf = new BlockMemeSlab.Half("meme_slab_half", Material.ROCK);
         memeSlabHalf.setCreativeTab(ModBlocks.tabMemeModBlocks).setHardness(3f).setResistance(5f).setHarvestLevel("pickaxe", 2);
         memeSlabDouble = new BlockMemeSlab.Double("meme_slab_double", Material.ROCK);
@@ -91,7 +91,7 @@ public class ModBlocks {
         memeSapling = new BlockMemeSapling("meme_sapling");
         memeSapling.setCreativeTab(ModBlocks.tabMemeModEnvironment);
 
-        //TODO make more than one block come out of processors
+        //TODO make more than one block come out of processors (or just dont)
         memeProcessor = new BlockMemeProcessor("meme_processor", Material.ROCK);
         memeProcessor.setCreativeTab(ModBlocks.tabMemeModBlocks);
 

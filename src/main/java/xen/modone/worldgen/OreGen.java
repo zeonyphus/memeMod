@@ -25,7 +25,7 @@ public class OreGen implements IWorldGenerator {
                 break;
             //Overworld
             case 0:
-                runGenerator(ModBlocks.memeOre.getDefaultState(), 7,10,6,58, BlockMatcher.forBlock(Blocks.STONE), world, random, chunkX, chunkZ);
+                runGenerator(ModBlocks.memeOre.getDefaultState(), 7,5,4,30, BlockMatcher.forBlock(Blocks.STONE), world, random, chunkX, chunkZ);
             //End
             case 1:
                 break;
@@ -33,7 +33,6 @@ public class OreGen implements IWorldGenerator {
             default:
                 break;
         }
-
     }
 
     private void runGenerator(IBlockState blockToGen, int amountToGen, int spawnChance, int minHeight, int maxHeight, Predicate<IBlockState> blockToReplace, World world, Random rand, int chunk_X, int chunk_Z){

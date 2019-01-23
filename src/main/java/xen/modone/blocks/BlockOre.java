@@ -64,5 +64,4 @@ public class BlockOre extends BlockBasic {
             return this.quantityDropped(random);
         }
     }
-
 }
