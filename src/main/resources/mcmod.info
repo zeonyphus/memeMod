@@ -3,7 +3,7 @@
   "modid": "modone",
   "name": "Mod One",
   "description": "Example placeholder mod desc.",
-  "version": "${0.7}",
+  "version": "${0.8}",
   "mcversion": "${1.12}",
   "url": "",
   "updateUrl": "",

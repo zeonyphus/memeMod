@@ -16,12 +16,12 @@ import xen.modone.init.ModRecipes;
 import xen.modone.util.GuiHandler;
 import xen.modone.worldgen.OreGen;
 
-@Mod(modid = ModOne.MODID, name = ModOne.NAME, version = ModOne.VERSION, acceptedMinecraftVersions = ModOne.ACCEPTED_MINECRAFT_VERSIONS)
+    @Mod(modid = ModOne.MODID, name = ModOne.NAME, version = ModOne.VERSION, acceptedMinecraftVersions = ModOne.ACCEPTED_MINECRAFT_VERSIONS)
 public class ModOne {
 
     public static final String MODID = "modone";
     public static final String NAME = "ModOne";
-    public static final String VERSION = "0.7";
+    public static final String VERSION = "0.8";
     public static final String ACCEPTED_MINECRAFT_VERSIONS = "[1.12]";
 
     public static final int guiMemeProcessor = 0;
